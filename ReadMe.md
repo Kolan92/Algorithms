@@ -4,7 +4,7 @@ This repostiry contains implementation of popular alghoritms based on Algorithms
 
 ## Sorting
 
-- [ ] Insertion Sort
+- [x] Insertion Sort
 - [ ] Median Sort
 - [ ] Quicksort
 - [ ] Selection Sort
