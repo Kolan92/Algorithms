@@ -1,6 +1,6 @@
 export function insertionSort(array: number[]): void {
-    for (let i = 1; i < array.length; i++) {
-        insert(array, i, array[i]);
+    for (let index = 1; index < array.length; index++) {
+        insert(array, index, array[index]);
     }
 }
 

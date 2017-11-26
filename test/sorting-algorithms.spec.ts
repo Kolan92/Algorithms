@@ -12,6 +12,12 @@ beforeEach(() => {
 describe('Sorting algorithms', () => {
 
   it('Should sort empty collection', () => {
+    var empty: number[] = [];
+    insertionSort(empty);
+    expect(empty).to.be.empty;
+  });
+
+  it('Should sort collection', () => {
     insertionSort(unsortedData);
     expect(unsortedData).to.be.deep.equal(sortedData);
   });
