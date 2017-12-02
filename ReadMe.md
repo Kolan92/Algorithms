@@ -6,7 +6,7 @@ This repostiry contains implementation of popular alghoritms based on Algorithms
 
 - [x] Insertion Sort
 - [ ] Median Sort
-- [ ] Quicksort
+- [x] Quicksort
 - [ ] Selection Sort
 - [ ] Heap Sort
 - [ ] Counting Sort
@@ -14,7 +14,6 @@ This repostiry contains implementation of popular alghoritms based on Algorithms
 
 ## Searching
 
-- [ ] Overview
 - [ ] Sequential Search
 - [ ] Binary Search
 - [ ] Hash-based Search

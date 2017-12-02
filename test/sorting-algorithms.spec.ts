@@ -1,4 +1,4 @@
-import { insertionSort } from '../src/sorting-algorithms';
+import { insertionSort, quickSort } from '../src/sorting-algorithms';
 import { expect } from 'chai';
 import 'mocha';
 
@@ -11,15 +11,26 @@ beforeEach(() => {
 
 describe('Sorting algorithms', () => {
 
-  it('Should sort empty collection', () => {
+  it('Should sort empty collection by insertion sort', () => {
     var empty: number[] = [];
     insertionSort(empty);
     expect(empty).to.be.empty;
   });
 
-  it('Should sort collection', () => {
+  it('Should sort collection by insertion sort', () => {
     insertionSort(unsortedData);
     expect(unsortedData).to.be.deep.equal(sortedData);
   });
 
+  it('Should sort empty collection by quick sort',() => {
+    var empty: number[] = [];
+    quickSort(empty);
+    expect(empty).to.be.empty;
+  });
+
+  it('Should sort collection by quick sort', () => {
+    quickSort(unsortedData);
+    console.log(unsortedData);    
+    expect(unsortedData).to.be.deep.equal(sortedData);
+  });
 });
