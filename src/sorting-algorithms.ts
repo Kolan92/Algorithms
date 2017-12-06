@@ -56,3 +56,30 @@ function swap(array: number[], lowerIndex: number, higherIndex: number): void{
     array[lowerIndex] = array[higherIndex];
     array[higherIndex] = temp;
 }
+
+export function selectionSort(array: number[]): void{
+    selectionSortImplementation(array, 0, array.length - 1);
+}
+
+function selectionSortImplementation(array: number[], lowerIndex: number, higherIndex: number): void{
+    for(let index: number = array.length - 1; index >= 1; index--){
+        let maxElementIndex: number = selectMax(array, 0, index);
+        if(maxElementIndex != index){
+            swap(array, index, maxElementIndex);
+        }
+    }
+}
+
+function selectMax(array: number[], lowerIndex: number, higherIndex: number): number{
+    let maxElementIndex: number = lowerIndex;
+    let index: number = lowerIndex;
+
+    while(++index <= higherIndex){
+        if(array[index] > array[maxElementIndex]){
+            maxElementIndex = index;
+        }
+    }
+
+    return maxElementIndex;
+}
+    
