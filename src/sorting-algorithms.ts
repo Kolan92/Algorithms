@@ -82,4 +82,39 @@ function selectMax(array: number[], lowerIndex: number, higherIndex: number): nu
 
     return maxElementIndex;
 }
+
+export function heapSort(array: number[]):void{
+    buildHeap(array);
+    for(let index: number = array.length - 1; index >= 1; index--){
+        swap(array, 0, index);
+        heapify(array, 0, index);
+    }
+}
+
+function buildHeap(array: number[]): void{
+    for(let index = array.length - 1; index >= 0; index--){
+        heapify(array, index, array.length);
+    }
+}
+
+function heapify(array: number[], startIndex: number, endIndex:number): void{
+    let lowerIndex: number = 2 * startIndex + 1;
+    let higherIndex: number = 2 * startIndex + 2;
+
+    let indexOfLargestElement: number;
+    if(lowerIndex < endIndex && array[lowerIndex] > array[startIndex]){
+        indexOfLargestElement = lowerIndex;
+    } else{
+        indexOfLargestElement = startIndex;
+    }
+    if(higherIndex < endIndex && array[higherIndex] > array[indexOfLargestElement]){
+        indexOfLargestElement = higherIndex;
+    }
+
+    if(startIndex != indexOfLargestElement){
+        swap(array, startIndex, indexOfLargestElement);
+
+        heapify(array, indexOfLargestElement, endIndex);
+    }
+}
     

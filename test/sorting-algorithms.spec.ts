@@ -1,4 +1,4 @@
-import { insertionSort, quickSort, selectionSort } from '../src/sorting-algorithms';
+import { insertionSort, quickSort, selectionSort, heapSort } from '../src/sorting-algorithms';
 import { expect } from 'chai';
 import 'mocha';
 
@@ -12,7 +12,7 @@ beforeEach(() => {
 describe('Sorting algorithms', () => {
 
   it('Should sort empty collection by insertion sort', () => {
-    var empty: number[] = [];
+    let empty: number[] = [];
     insertionSort(empty);
     expect(empty).to.be.empty;
   });
@@ -23,7 +23,7 @@ describe('Sorting algorithms', () => {
   });
 
   it('Should sort empty collection by quick sort',() => {
-    var empty: number[] = [];
+    let empty: number[] = [];
     quickSort(empty);
     expect(empty).to.be.empty;
   });
@@ -35,13 +35,25 @@ describe('Sorting algorithms', () => {
   });
 
   it('Should sort empty collection by selection sort',() => {
-    var empty: number[] = [];
+    let empty: number[] = [];
     selectionSort(empty);
     expect(empty).to.be.empty;
   });
 
   it('Should sort collection by selection sort', () => {
     selectionSort(unsortedData);
+    console.log(unsortedData);    
+    expect(unsortedData).to.be.deep.equal(sortedData);
+  });
+
+  it('Should sort empty collection by heap sort',() => {
+    let empty: number[] = [];
+    heapSort(empty);
+    expect(empty).to.be.empty;
+  });
+
+  it('Should sort collection by heap sort', () => {
+    heapSort(unsortedData);
     console.log(unsortedData);    
     expect(unsortedData).to.be.deep.equal(sortedData);
   });
