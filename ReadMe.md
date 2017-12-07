@@ -7,8 +7,8 @@ This repostiry contains implementation of popular alghoritms based on Algorithms
 - [x] Insertion Sort
 - [ ] Median Sort
 - [x] Quicksort
-- [ ] Selection Sort
-- [ ] Heap Sort
+- [x] Selection Sort
+- [x] Heap Sort
 - [ ] Counting Sort
 - [ ] Bucket Sort 
 
